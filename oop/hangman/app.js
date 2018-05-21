@@ -5,14 +5,23 @@
 
 let hangman = new Hangman('Doggo', 4);
 
+/**
+ * [displayGame display current stage of the same with the word and remeining guess]
+ * @param  {[string]} puzzle         [puzzle word]
+ * @param  {[number]} remainingGuess [number of guesses remained]
+ * @return {[type]}                [description]
+ */
+let displayGame = (puzzle, remainingGuess) => {
+    document.querySelector('#puzzle').innerHTML = puzzle;
+    document.querySelector('#remaining').innerHTML = remainingGuess;
+};
+
 // Start game - Display the word in *** form and number of guess a user has
-console.log(hangman.getPuzzle());
-console.log(hangman.guessCount);
+displayGame(hangman.getPuzzle(), hangman.guessCount);
 
 // Listen to user keypress
 window.addEventListener('keypress', (event) => {
     let guess = String.fromCharCode(event.charCode);
     hangman.makeGuess(guess);
-    console.log(hangman.getPuzzle());
-    console.log(hangman.guessCount);
+    displayGame(hangman.getPuzzle(), hangman.guessCount);
 });
