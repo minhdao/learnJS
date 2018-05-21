@@ -22,7 +22,7 @@ let Hangman = function(word, guessCount) {
         return puzzle;
     };
 
-    // Call when user make a guess
+    // Call when user make a guess  
     this.makeGuess = (letter) => {
         letter = letter.toLowerCase();
         let alreadyGuessed = this.guessedLetters.includes(letter);
