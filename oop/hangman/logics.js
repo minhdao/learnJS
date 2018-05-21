@@ -1,10 +1,15 @@
-// constructor function to create objects
-// contructor focus on the uniqueness of each object created
-
+/**
+ * [Hangman constuctor function with info and methods needed the game]
+ * @param  {[string]} word          [a word to be guessed]
+ * @param  {[number]} guessCount    [number of guesses left]
+ * @return {[type]}                 [no return]
+ */
 let Hangman = function(word, guessCount) {
     this.word = word.toLowerCase().split('');
     this.guessCount = guessCount;
     this.guessedLetters = [];
+
+    // Get the current stage of the puzzle word
     this.getPuzzle = () => {
         let puzzle = '';
         this.word.forEach((letter) => {
@@ -16,6 +21,8 @@ let Hangman = function(word, guessCount) {
         });
         return puzzle;
     };
+
+    // Call when user make a guess
     this.makeGuess = (letter) => {
         letter = letter.toLowerCase();
         let alreadyGuessed = this.guessedLetters.includes(letter);
