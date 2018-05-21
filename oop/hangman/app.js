@@ -12,9 +12,6 @@ let hangman = new Hangman('Doggo', 4);
  * @return {[type]}                [description]
  */
 let displayGame = (puzzle, remainingGuess) => {
-    // run check through the game
-    hangman.checkGameEnded();
-
     // diplay and update UI accordingly
     document.querySelector('#puzzle').innerHTML = puzzle;
     document.querySelector('#remaining').innerHTML = remainingGuess;

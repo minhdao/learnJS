@@ -40,6 +40,7 @@ let Hangman = function(word, guessCount) {
                 this.guessCount--;
             }
         }
+        this.checkGameEnded();
     };
 
     // Check if game already ended
