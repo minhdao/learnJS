@@ -12,8 +12,19 @@ let hangman = new Hangman('Doggo', 4);
  * @return {[type]}                [description]
  */
 let displayGame = (puzzle, remainingGuess) => {
+    // run check through the game
+    hangman.checkGameEnded();
+
+    // diplay and update UI accordingly
     document.querySelector('#puzzle').innerHTML = puzzle;
     document.querySelector('#remaining').innerHTML = remainingGuess;
+    if (hangman.gameDone || hangman.puzzleSolved) {
+        if (hangman.win) {
+            document.querySelector('#status').innerHTML = 'Win :)';
+        } else {
+            document.querySelector('#status').innerHTML = 'Lose :(';
+        }
+    }
 };
 
 // Start game - Display the word in *** form and number of guess a user has
