@@ -28,12 +28,3 @@ let Hangman = function(word, guessCount) {
         }
     };
 };
-
-hangman1 = new Hangman('Zipper', 10);
-hangman2 = new Hangman('Mountain', 10);
-
-console.log(hangman1.word);
-hangman1.makeGuess('z');
-hangman1.makeGuess('p');
-hangman1.makeGuess('o');
-console.log(hangman1.getPuzzle());
