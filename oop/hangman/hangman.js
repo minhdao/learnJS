@@ -17,8 +17,14 @@ let Hangman = function(word, guessCount) {
         return puzzle;
     };
     this.makeGuess = (letter) => {
-        if (this.guessedLetters.indexOf(letter) === -1) {
+        letter = letter.toLowerCase();
+        let alreadyGuessed = this.guessedLetters.includes(letter);
+        let correctGuess = this.word.includes(letter);
+        if (!alreadyGuessed) {
             this.guessedLetters.push(letter);
+        }
+        if (!alreadyGuessed && !correctGuess) {
+            this.guessCount--;
         }
     };
 };
@@ -29,4 +35,5 @@ hangman2 = new Hangman('Mountain', 10);
 console.log(hangman1.word);
 hangman1.makeGuess('z');
 hangman1.makeGuess('p');
+hangman1.makeGuess('o');
 console.log(hangman1.getPuzzle());
