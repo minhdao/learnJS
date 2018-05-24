@@ -4,9 +4,9 @@
   "description": "",
   "main": "input.js",
   "scripts": {
-    "webpack": "webpack",
+    "build-wp": "webpack",
     "serve": "live-server public",
-    "build": "babel src/index.js -o public/scripts/bundle.js --presets env --watch"
+    "build-bb": "babel src/index.js -o public/scripts/bundle.js --presets env --watch"
   },
   "author": "mdao",
   "license": "ISC",
