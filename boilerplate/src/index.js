@@ -14,5 +14,7 @@
  */
 
 import { add } from './utilities.js';
+import { scream } from './scream.js';
 
 console.log(add(10, 21));
+console.log(scream('hello'));
