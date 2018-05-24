@@ -15,6 +15,7 @@
 
 import { add } from './utilities.js';
 import { scream } from './scream.js';
+import name, { func1, func2 } from './export-styles.js';
 
 console.log(add(10, 21));
 console.log(scream('hello'));
