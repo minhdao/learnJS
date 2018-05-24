@@ -7,7 +7,8 @@
     "build-wp": "webpack",
     "serve": "live-server public",
     "build-bb": "babel src/index.js -o public/scripts/bundle.js --presets env --watch",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
   },
   "author": "mdao",
   "license": "ISC",
